@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab10_05"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-30 12:25:45 AM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0zMDsxMjoxNjo1MCBBTTsyMzY1"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0zMDsxMjoyNTo0NSBBTTsxOzI0Nzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="myArray" type="Integer" array="True" size="8"/>
+            <declare name="sumOfOddIndices, i" type="Integer" array="False" size=""/>
+            <assign variable="sumOfOddIndices" expression="0"/>
+            <assign variable="myArray[0]" expression="10"/>
+            <assign variable="myArray[1]" expression="3"/>
+            <assign variable="myArray[2]" expression="-5"/>
+            <assign variable="myArray[3]" expression="101"/>
+            <assign variable="myArray[4]" expression="554"/>
+            <assign variable="myArray[5]" expression="-65"/>
+            <assign variable="myArray[6]" expression="12"/>
+            <assign variable="myArray[7]" expression="8"/>
+            <for variable="i" start="0" end="7" direction="inc" step="1">
+                <if expression="i % 2 != 0">
+                    <then>
+                        <assign variable="sumOfOddIndices" expression="sumOfOddIndices + myArray[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="sumOfOddIndices" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab11_02"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-02 11:32:05 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wMjsxMToxNzo0NyBQTTsyMzg2"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wMjsxMTozMjowNSBQTTsxOzI0ODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="CalculateFactorial()"/>
+            <output expression="&quot;Result : &quot; &amp; result" newline="True"/>
+        </body>
+    </function>
+    <function name="CalculateFactorial" type="Integer" variable="fact">
+        <parameters/>
+        <body>
+            <declare name="i, fact, number" type="Integer" array="False" size=""/>
+            <assign variable="fact" expression="1"/>
+            <output expression="&quot;Enter number factorial : &quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="number &lt; 0">
+                <then>
+                    <output expression="&quot;Error try again !&quot;" newline="True"/>
+                </then>
+                <else>
+                    <for variable="i" start="1" end="number" direction="inc" step="1">
+                        <assign variable="fact" expression="fact * i"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab11_04"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-04 09:46:48 AM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wNDswODo0NzoyOCBBTTsyMzgx"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wNDswOTo0Njo0OCBBTTsxOzI0OTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continueConversion" type="Boolean" array="False" size=""/>
+            <assign variable="continueConversion" expression="True"/>
+            <while expression="continueConversion">
+                <declare name="inputChristianYear" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter Christian year : &quot;" newline="True"/>
+                <input variable="inputChristianYear"/>
+                <declare name="outputBuddhistYear" type="Integer" array="False" size=""/>
+                <call expression="ConvertCTB(inputChristianYear)"/>
+                <assign variable="outputBuddhistYear" expression="ConvertCTB(inputChristianYear)"/>
+                <output expression="&quot;Result : &quot; &amp; outputBuddhistYear" newline="True"/>
+                <output expression="&quot;Continuous ? if not type (no)&quot;" newline="True"/>
+                <declare name="userChoice" type="String" array="False" size=""/>
+                <input variable="userChoice"/>
+                <if expression="userChoice = &quot;no&quot;">
+                    <then>
+                        <assign variable="continueConversion" expression="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="ConvertCTB" type="Integer" variable="buddhistYear">
+        <parameters>
+            <parameter name="christianYear" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="buddhistYear" type="Integer" array="False" size=""/>
+            <assign variable="buddhistYear" expression="christianYear + 543"/>
+        </body>
+    </function>
+</flowgorithm>

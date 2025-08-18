@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab10_02"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-29 11:55:33 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTsxMToxMzo1MCBQTTsyMzg0"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTsxMTo1NTozMyBQTTszOzI1MDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="Value" type="String" array="True" size="8"/>
+            <assign variable="Value[0]" expression="&quot;yellow&quot;"/>
+            <assign variable="Value[1]" expression="&quot;green&quot;"/>
+            <assign variable="Value[2]" expression="&quot;blue&quot;"/>
+            <assign variable="Value[3]" expression="&quot;red&quot;"/>
+            <assign variable="Value[4]" expression="&quot;black&quot;"/>
+            <assign variable="Value[5]" expression="&quot;pink&quot;"/>
+            <assign variable="Value[6]" expression="&quot;white&quot;"/>
+            <assign variable="Value[7]" expression="&quot;purple&quot;"/>
+            <for variable="i" start="0" end="Size(Value) - 1" direction="inc" step="1">
+                <output expression="Value[i] &amp; &quot;, &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

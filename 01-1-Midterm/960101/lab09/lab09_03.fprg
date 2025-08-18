@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab09_03"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-29 07:25:51 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTswNzowNTo0MSBQTTsyMzkw"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTswNzoyNTo1MSBQTTsxOzI1MDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="maxStars, n, i" type="Integer" array="False" size=""/>
+            <declare name="result" type="String" array="False" size=""/>
+            <output expression="&quot;Enter number : &quot;" newline="True"/>
+            <input variable="maxStars"/>
+            <assign variable="result" expression="&quot;&quot;"/>
+            <for variable="n" start="2" end="maxStars" direction="inc" step="2">
+                <for variable="i" start="1" end="n" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot; &quot;" newline="True"/>
+            </for>
+            <assign variable="n" expression="maxStars - 2"/>
+            <for variable="n" start="n" end="2" direction="dec" step="2">
+                <for variable="i" start="1" end="n" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot; &quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

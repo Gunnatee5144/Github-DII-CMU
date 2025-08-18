@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab11_01"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-02 08:44:02 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wMjswODozODoxNSBQTTsyMzkw"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wMjswODo0NDowMiBQTTsxOzI0OTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="AddNumbers"/>
+        </body>
+    </function>
+    <function name="AddNumbers" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter first number : &quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Enter second number : &quot;" newline="True"/>
+            <input variable="num2"/>
+            <assign variable="sum" expression="num1 + num2"/>
+            <output expression="&quot;Sum : &quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

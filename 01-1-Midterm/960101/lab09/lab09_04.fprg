@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab09_04"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-29 08:00:46 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTswNzo1MjoyMSBQTTsyMzkw"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTswODowMDo0NiBQTTsxOzI0OTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, m, i, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter N : &quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Enter M : &quot;" newline="True"/>
+            <input variable="m"/>
+            <if expression="n &lt;= 0 AND m &lt;= 0 AND n &gt; m">
+                <then>
+                    <output expression="&quot;Error enter vaild positive&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="i" start="n" end="m" direction="inc" step="1">
+                <output expression="&quot;Muitiplication table of : &quot; &amp;i" newline="True"/>
+                <for variable="j" start="1" end="12" direction="inc" step="1">
+                    <output expression="i &amp; &quot; x &quot; &amp; j &amp; &quot; = &quot; &amp; (i * j)" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

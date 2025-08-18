@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab10_01"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-29 11:13:39 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTsxMTowNjowNCBQTTsyMzg1"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yOTsxMToxMzozOSBQTTsxOzI0OTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Value" type="Real" array="True" size="5"/>
+            <assign variable="Value[0]" expression="10.1"/>
+            <assign variable="Value[1]" expression="13.2"/>
+            <assign variable="Value[2]" expression="9.5"/>
+            <assign variable="Value[3]" expression="18.7"/>
+            <assign variable="Value[4]" expression="20"/>
+            <output expression="&quot;The number at index 2 is &quot; &amp; Value[2]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

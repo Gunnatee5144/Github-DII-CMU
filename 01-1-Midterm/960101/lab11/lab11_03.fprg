@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab11_03"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-06-03 11:47:41 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wMzsxMTo0Mjo0OCBQTTsyMzg2"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNi0wMzsxMTo0Nzo0MSBQTTsxOzI0OTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="CheckOddEven()"/>
+        </body>
+    </function>
+    <function name="CheckOddEven" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number : &quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="number % 2 == 0">
+                <then>
+                    <output expression="&quot;Number : &quot; &amp; number &amp; &quot; is Even number.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Number : &quot; &amp; number &amp; &quot; is Odd number.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

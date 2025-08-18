@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab05_2"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-23 03:25:01 PM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yMjswNTo1MDoyNSBQTTsyMzgz"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0yMzswMzoyNTowMSBQTTs1OzI0OTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Enter your income : &quot;" newline="True"/>
+            <declare name="realincome" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <declare name="remainingincome" type="Integer" array="False" size=""/>
+            <assign variable="tax" expression="0.0"/>
+            <input variable="realincome"/>
+            <assign variable="remainingincome" expression="realincome"/>
+            <if expression="remainingincome &gt; 0">
+                <then>
+                    <if expression="remainingincome &gt;= 50000">
+                        <then>
+                            <assign variable="tax" expression="tax + (50000 * 0.05)"/>
+                            <assign variable="remainingIncome" expression="remainingincome - 50000"/>
+                            <if expression="remainingincome &gt;= 50000">
+                                <then>
+                                    <assign variable="tax" expression="tax + (50000 * 0.06)"/>
+                                    <assign variable="remainingincome" expression="remainingincome - 50000"/>
+                                    <if expression="remainingincome &gt;= 100000">
+                                        <then>
+                                            <assign variable="tax" expression="tax + (100000 * 0.07)"/>
+                                            <assign variable="remainingincome" expression="remainingincome - 100000"/>
+                                            <if expression="remainingincome &gt;= 100000">
+                                                <then>
+                                                    <assign variable="tax" expression="tax + (100000 * 0.08)"/>
+                                                    <assign variable="remainingincome" expression="remainingincome - 100000"/>
+                                                    <if expression="remainingincome &gt; 0">
+                                                        <then>
+                                                            <assign variable="tax" expression="tax + (remainingincome * 0.10)"/>
+                                                            <assign variable="remainingincome" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="tax" expression="tax + (remainingincome * 0.10)"/>
+                                                            <assign variable="remainingincome" expression="0"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <assign variable="tax" expression="tax + (remainingincome * 0.08)"/>
+                                                    <assign variable="remainingincome" expression="0"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <assign variable="tax" expression="tax + (remainingincome * 0.07)"/>
+                                            <assign variable="remainingincome" expression="0"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <assign variable="tax" expression="tax + (remainingincome * 0.06)"/>
+                                    <assign variable="remainingincome" expression="0"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="tax" expression="tax + (remainingincome * 0.05)"/>
+                            <assign variable="remainingincome" expression="0"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;Total tax : &quot; &amp; tax" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Total tax : &quot; &amp; tax" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

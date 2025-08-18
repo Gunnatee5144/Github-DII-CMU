@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab10_06"/>
+        <attribute name="authors" value="Gunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-30 09:11:39 AM"/>
+        <attribute name="created" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0zMDswOTowNjo0OSBBTTsyMzc4"/>
+        <attribute name="edited" value="R3VubmE7R1VOTkFURUU7MjAyNS0wNS0zMDswOToxMTozOSBBTTsxOzI0ODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numArray" type="Real" array="True" size="7"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="numArray[1]" expression="55.3"/>
+            <assign variable="numArray[2]" expression="6"/>
+            <assign variable="numArray[3]" expression="69"/>
+            <assign variable="numArray[4]" expression="88.9"/>
+            <assign variable="numArray[5]" expression="23.8"/>
+            <assign variable="numArray[6]" expression="-9.2"/>
+            <for variable="i" start="1" end="6" direction="inc" step="1">
+                <output expression="numArray[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
