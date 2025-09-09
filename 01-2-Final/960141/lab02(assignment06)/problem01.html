@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    input {
+        margin-bottom: 10px;
+    }
+    button {
+        margin-top: 10px;
+    }
+    #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
+    
+</style>
+<body>
+    <h1>Student Scores</h1>
+    <div>
+        <form id="student_form">
+            <label for="name_stu">Name:</label>
+            <input type="text" placeholder="Enter text here" id="name_stu">
+            <label for="midterm_score_stu">Midterm Score:</label>
+            <input type="number" placeholder="Enter text here" id="midterm_score_stu">
+            <label for="final_score_stu">Final Score:</label>
+            <input type="number" placeholder="Enter text here" id="final_score_stu">
+            <label for="report_score_stu">Report Score:</label>
+            <input type="number" placeholder="Enter text here" id="report_score_stu">
+        </form>
+        <br>
+        <button type="submit" form="student_form" value="Submit">Submit</button>
+        <hr>
+        <h2>Output</h2>
+        <div id="output"></div>
+
+    </div>
+
+    <script>
+
+        const form = document.getElementById("student_form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            const name = document.getElementById("name_stu").value;
+            const midterm = parseFloat(document.getElementById("midterm_score_stu").value) || 0;
+            const final = parseFloat(document.getElementById("final_score_stu").value) || 0;
+            const report = parseFloat(document.getElementById("report_score_stu").value) || 0;
+
+            const totalScore = midterm + final + report;
+
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `<p>Student Name: ${name}</p>
+                                   <p>Midterm Score: ${midterm}</p>
+                                   <p>Final Score: ${final}</p>
+                                   <p>Report Score: ${report}</p>
+                                   <p>Total Score: ${totalScore}</p>`;
+        });
+    </script>
+</body>
+</html>

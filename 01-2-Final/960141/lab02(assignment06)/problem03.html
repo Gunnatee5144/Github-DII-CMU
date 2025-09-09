@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Travel Reservation Calculator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; max-width:720px; margin:2rem auto; padding:1rem; }
+        label { display:block; margin:0.5rem 0 0.2rem; }
+        input[type="number"] { width:6rem; }
+        .row { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+        .results { margin-top:1rem; padding:1rem; border:1px solid #ddd; background:#fafafa; }
+        .btn { margin-top:0.75rem; }
+    </style>
+</head>
+<body>
+    <h1>Travel Reservation</h1>
+
+    <form id="tripForm" onsubmit="return false;">
+        <label for="country">Country</label>
+        <select id="country" required>
+            <option value="Denmark">Denmark</option>
+            <option value="Australia">Australia</option>
+            <option value="Japan">Japan</option>
+        </select>
+
+        <div class="row">
+            <div>
+                <label for="nights">Number of nights</label>
+                <input id="nights" type="number" min="1" value="1" required />
+            </div>
+
+            <div>
+                <label for="travellers">Number of travellers</label>
+                <input id="travellers" type="number" min="1" value="1" required />
+            </div>
+        </div>
+
+        <div class="row btn">
+            <button id="calc" type="button">Calculate</button>
+            <button id="reset" type="reset">Reset</button>
+        </div>
+    </form>
+
+    <div id="output" class="results" hidden>
+        <h2>Cost Summary</h2>
+        <div id="details"></div>
+    </div>
+
+    <script>
+        // Pricing table
+        const pricing = {
+            "Denmark": { airfare: 1500, hotelPerNight: 50 },
+            "Australia": { airfare: 1000, hotelPerNight: 60 },
+            "Japan": { airfare: 700, hotelPerNight: 30 }
+        };
+
+        const elCountry = document.getElementById('country');
+        const elNights = document.getElementById('nights');
+        const elTrav = document.getElementById('travellers');
+        const elOutput = document.getElementById('output');
+        const elDetails = document.getElementById('details');
+        const btnCalc = document.getElementById('calc');
+
+        function fmt(n){ return '$' + n.toFixed(2); }
+
+        btnCalc.addEventListener('click', () => {
+            const country = elCountry.value;
+            const nights = parseInt(elNights.value, 10) || 0;
+            const travellers = parseInt(elTrav.value, 10) || 0;
+
+            if (nights < 1 || travellers < 1) {
+                alert('Please enter valid numbers of nights and travellers (minimum 1).');
+                return;
+            }
+
+            const { airfare, hotelPerNight } = pricing[country];
+            const airTotal = airfare * travellers;
+            const hotelTotal = hotelPerNight * nights * travellers;
+            const subtotal = airTotal + hotelTotal;
+
+            const discountRate = nights > 5 ? 0.20 : 0.10;
+            const discount = subtotal * discountRate;
+            const total = subtotal - discount;
+
+            elDetails.innerHTML = `
+                <p>Destination: <strong>${country}</strong></p>
+                <p>Travellers: <strong>${travellers}</strong></p>
+                <p>Nights: <strong>${nights}</strong></p>
+                <hr>
+                <p>Air fare total: <strong>${fmt(airTotal)}</strong></p>
+                <p>Hotel total: <strong>${fmt(hotelTotal)}</strong></p>
+                <p>COVID-19 promotion: <strong>${Math.round(discountRate*100)}% off</strong></p>
+                <h3>Total cost: ${fmt(total)}</h3>
+            `;
+            elOutput.hidden = false;
+        });
+
+        // Reset hides output
+        document.getElementById('reset').addEventListener('click', () => {
+            elOutput.hidden = true;
+        });
+    </script>
+</body>
+</html>
