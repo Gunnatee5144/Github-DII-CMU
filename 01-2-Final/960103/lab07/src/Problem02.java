@@ -24,7 +24,8 @@ public class Problem02 {
 
         System.out.println("----- Summary Information Students -----");
         for (int y = 0; y < num_stu; y++) {
-            System.out.println("\nStudent " + (y + 1) + "\nName : " + name_stu[y] + "\nHeight : " + data_stu[y][0] + "\nWeight : " + data_stu[y][1]);
+            System.out.println("\nStudent " + (y + 1) + "\nName : " + name_stu[y]
+                    + "\nHeight : " + data_stu[y][0] + "\nWeight : " + data_stu[y][1]);
         }
 
         input.close();

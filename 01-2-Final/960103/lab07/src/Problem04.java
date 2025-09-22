@@ -27,7 +27,9 @@ public class Problem04 {
         for (int a = 0; a < num_stu; a++) {
             double sum_score_tem = score_stu[a][0] + score_stu[a][1] + score_stu[a][2];
             double average_score_tem = sum_score_tem / 3;
-            System.out.print("\nStudent " + (a + 1) + ": " + score_stu[a][0] + " " + score_stu[a][1] + " " + score_stu[a][2] + " | " + sum_score_tem + " | " + String.format("%.2f", average_score_tem));
+            System.out.print("\nStudent " + (a + 1) + ": " + score_stu[a][0] + " "
+                    + score_stu[a][1] + " " + score_stu[a][2] + " | " + sum_score_tem
+                    + " | " + String.format("%.2f", average_score_tem));
         }
 
 
@@ -42,7 +44,8 @@ public class Problem04 {
         average_biology = sum_biology / num_stu;
         average_chemistry = sum_chemistry / num_stu;
 
-        System.out.print("\n" + average_physics + " " + average_biology + " " + average_chemistry);
+        System.out.print("\n" + average_physics + " " + average_biology + " " +
+                average_chemistry);
 
         for (int z = 0; z < num_stu; z++) {
             System.out.print("\nStudent " + (z + 1) + ": ");

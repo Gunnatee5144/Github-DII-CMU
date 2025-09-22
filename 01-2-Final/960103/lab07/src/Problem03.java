@@ -13,7 +13,8 @@ public class Problem03 {
         // รับค่าใส่ array
         for (int row = 0; row < data.length; row++) {
             for (int col = 0; col < data[row].length; col++) {
-                System.out.print("Enter number of " + "[" + row + "][" + col + "]" + " : ");
+                System.out.print("Enter number of " + "[" + row + "][" + col + "]"
+                        + " : ");
                 data[row][col] = input.nextInt();
             }
         }
