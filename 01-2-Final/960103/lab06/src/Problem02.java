@@ -11,20 +11,22 @@ public class Problem02 {
             num[x] = num_input;
         }
 
+        System.out.print("Result before : ");
         for (int y = 0; y < 15; y++) {
-            System.out.println("Your data after change array " + (y+1) + " is " + num[y]);
+            System.out.print(num[y] + " ");
         }
 
-        System.out.print("Enter your number index in array : ");
+        System.out.print("\nEnter your number index in array : ");
         int num_index = input.nextInt();
         num_index = num_index - 1;
-        System.out.print("Enter yout number to change : ");
+        System.out.print("\nEnter your number to change : ");
         int num_change = input.nextInt();
 
         num[num_index] = num_change;
 
+        System.out.print("Result after : ");
         for (int z = 0; z < 15; z++) {
-            System.out.println("Your data after change array " + (z+1) + " is " + num[z]);
+            System.out.print(num[z] + " ");
         }
     }
 }

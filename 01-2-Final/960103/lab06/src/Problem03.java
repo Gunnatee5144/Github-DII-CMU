@@ -19,9 +19,6 @@ public class Problem03 {
         for (int y = 0 ; y <= 4; y++) {
             if (height_tem <= height[y]) {
                 index_tem = y;
-                if (height_tem == height[y]) {
-
-                }
             }
         }
 

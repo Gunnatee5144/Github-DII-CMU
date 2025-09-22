@@ -17,6 +17,9 @@ public class Problem01 {
             if (num_input_check == num[y]) {
                 System.out.println("Find same number !");
                 break;
+            } else {
+                System.out.println("Not same number !");
+                break;
             }
         }
     }
